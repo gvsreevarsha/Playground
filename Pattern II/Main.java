@@ -1,0 +1,30 @@
+#include<iostream>
+int main()
+{
+  int n,i,j,count=1,count2=3;
+  std::cin>>n;
+  for(i=1;i<=n;i++)
+  {
+    if(i%2==1)
+    {
+      for(j=1;j<=i;j++) 
+      {
+        if(j!=1)
+          std::cout<<"*";
+        std::cout<<count++;
+      }
+      count+=i+1;
+    }
+    else
+    {
+      for(j=1;j<=i;j++) 
+      {
+        if(j!=1)
+          std::cout<<"*";
+        std::cout<<count2--;
+      }
+      count2+=i+1+i+2+i;
+    }
+    std::cout<<"\n";
+  }
+}
